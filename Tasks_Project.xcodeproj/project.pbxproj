@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BC924789EA8C4218D2B6A1D3 /* Pods_Tasks_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BC5D7121C0DE4BAED25EB /* Pods_Tasks_Project.framework */; };
 		F5220F7D24084AC100E5E552 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5220F7C24084AC100E5E552 /* AppDelegate.swift */; };
-		F5220F7F24084AC100E5E552 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5220F7E24084AC100E5E552 /* SceneDelegate.swift */; };
 		F5220F8124084AC100E5E552 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5220F8024084AC100E5E552 /* ViewController.swift */; };
 		F5220F8424084AC100E5E552 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5220F8224084AC100E5E552 /* Main.storyboard */; };
 		F5220F8624084AC800E5E552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5220F8524084AC800E5E552 /* Assets.xcassets */; };
@@ -26,7 +25,6 @@
 		B7989556494D811AEF347588 /* Pods-Tasks_Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasks_Project.release.xcconfig"; path = "Target Support Files/Pods-Tasks_Project/Pods-Tasks_Project.release.xcconfig"; sourceTree = "<group>"; };
 		F5220F7924084AC100E5E552 /* Tasks_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5220F7C24084AC100E5E552 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5220F7E24084AC100E5E552 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F5220F8024084AC100E5E552 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5220F8324084AC100E5E552 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5220F8524084AC800E5E552 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				F5220F7C24084AC100E5E552 /* AppDelegate.swift */,
-				F5220F7E24084AC100E5E552 /* SceneDelegate.swift */,
 				F5220F8024084AC100E5E552 /* ViewController.swift */,
 				F5220F9024084B0100E5E552 /* TaskListViewController.swift */,
 				F5220F942408535100E5E552 /* PhotosSearchViewController.swift */,
@@ -224,7 +221,6 @@
 				F5220F7D24084AC100E5E552 /* AppDelegate.swift in Sources */,
 				F58DF3F2240BD7510025C06B /* PhotoCollectionViewCell.swift in Sources */,
 				F5220F952408535100E5E552 /* PhotosSearchViewController.swift in Sources */,
-				F5220F7F24084AC100E5E552 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

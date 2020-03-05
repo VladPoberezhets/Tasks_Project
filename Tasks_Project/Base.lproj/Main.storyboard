@@ -46,10 +46,16 @@
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bEb-KE-pNi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="lLh-rz-Avk"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nh2-1b-U8s">
-                                <rect key="frame" x="142" y="76" width="92" height="32"/>
+                                <rect key="frame" x="132" y="76" width="111" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Wgi-Yi-ZGU"/>
+                                </constraints>
                                 <segments>
                                     <segment title="1"/>
                                     <segment title="2"/>
@@ -61,7 +67,7 @@
                                 </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ShV-cO-lkk">
-                                <rect key="frame" x="0.0" y="115" width="375" height="532"/>
+                                <rect key="frame" x="0.0" y="161" width="375" height="506"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CJH-nb-AZR">
                                     <size key="itemSize" width="50" height="50"/>
@@ -77,11 +83,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rwi-ei-uXV">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rwi-ei-uXV">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rwi-ei-uXV" firstAttribute="centerY" secondItem="2TU-K8-UsT" secondAttribute="centerY" id="1Pj-dZ-nuD"/>
+                                                <constraint firstItem="rwi-ei-uXV" firstAttribute="leading" secondItem="2TU-K8-UsT" secondAttribute="leading" id="9P2-si-HbD"/>
+                                                <constraint firstItem="rwi-ei-uXV" firstAttribute="top" secondItem="2TU-K8-UsT" secondAttribute="top" id="9ox-i7-iCh"/>
+                                                <constraint firstItem="rwi-ei-uXV" firstAttribute="centerX" secondItem="2TU-K8-UsT" secondAttribute="centerX" id="vdY-bj-pVl"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
@@ -90,20 +101,25 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="sMX-BU-Cmg">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="bEb-KE-pNi" firstAttribute="trailing" secondItem="jcl-FH-jab" secondAttribute="trailing" id="22H-EU-mXh"/>
-                            <constraint firstItem="bEb-KE-pNi" firstAttribute="leading" secondItem="jcl-FH-jab" secondAttribute="leading" id="8uL-pZ-7SI"/>
-                            <constraint firstAttribute="bottom" secondItem="ShV-cO-lkk" secondAttribute="bottom" constant="20" symbolic="YES" id="FCt-39-FrM"/>
-                            <constraint firstItem="ShV-cO-lkk" firstAttribute="leading" secondItem="jcl-FH-jab" secondAttribute="leading" id="Fbg-g1-iB6"/>
-                            <constraint firstItem="bEb-KE-pNi" firstAttribute="top" secondItem="jcl-FH-jab" secondAttribute="top" id="d1z-u9-WJF"/>
-                            <constraint firstItem="nh2-1b-U8s" firstAttribute="leading" secondItem="jcl-FH-jab" secondAttribute="leading" constant="142" id="gQo-fg-nYm"/>
-                            <constraint firstItem="nh2-1b-U8s" firstAttribute="top" secondItem="bEb-KE-pNi" secondAttribute="bottom" constant="20" id="iDr-UI-2Wb"/>
-                            <constraint firstItem="jcl-FH-jab" firstAttribute="trailing" secondItem="nh2-1b-U8s" secondAttribute="trailing" constant="141" id="jvo-82-2HC"/>
-                            <constraint firstItem="ShV-cO-lkk" firstAttribute="top" secondItem="nh2-1b-U8s" secondAttribute="bottom" constant="8" id="k3G-aJ-glT"/>
-                            <constraint firstItem="ShV-cO-lkk" firstAttribute="trailing" secondItem="jcl-FH-jab" secondAttribute="trailing" id="sIR-JU-x3P"/>
+                            <constraint firstItem="ShV-cO-lkk" firstAttribute="trailing" secondItem="jcl-FH-jab" secondAttribute="trailing" id="FtK-Zx-pDZ"/>
+                            <constraint firstItem="nh2-1b-U8s" firstAttribute="centerX" secondItem="bEb-KE-pNi" secondAttribute="centerX" id="FzO-8P-58e"/>
+                            <constraint firstItem="nh2-1b-U8s" firstAttribute="top" secondItem="bEb-KE-pNi" secondAttribute="bottom" constant="20" id="H9m-Xp-V57"/>
+                            <constraint firstItem="ShV-cO-lkk" firstAttribute="leading" secondItem="jcl-FH-jab" secondAttribute="leading" id="HvR-ft-uke"/>
+                            <constraint firstItem="bEb-KE-pNi" firstAttribute="top" secondItem="jcl-FH-jab" secondAttribute="top" id="K80-wu-4v7"/>
+                            <constraint firstItem="sMX-BU-Cmg" firstAttribute="centerY" secondItem="bEb-KE-pNi" secondAttribute="centerY" id="PHi-L9-WDm"/>
+                            <constraint firstItem="sMX-BU-Cmg" firstAttribute="centerX" secondItem="bEb-KE-pNi" secondAttribute="centerX" id="YVP-7u-Atu"/>
+                            <constraint firstItem="bEb-KE-pNi" firstAttribute="trailing" secondItem="jcl-FH-jab" secondAttribute="trailing" id="bXc-L1-oJv"/>
+                            <constraint firstItem="bEb-KE-pNi" firstAttribute="leading" secondItem="jcl-FH-jab" secondAttribute="leading" id="mYJ-Oa-4Am"/>
+                            <constraint firstItem="ShV-cO-lkk" firstAttribute="top" secondItem="nh2-1b-U8s" secondAttribute="bottom" constant="52" id="tlM-rb-uZY"/>
+                            <constraint firstItem="ShV-cO-lkk" firstAttribute="bottom" secondItem="jcl-FH-jab" secondAttribute="bottom" id="x2z-Yo-pCt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jcl-FH-jab"/>
                         <connections>
@@ -112,6 +128,7 @@
                     </view>
                     <connections>
                         <outlet property="SearchBar" destination="bEb-KE-pNi" id="O5d-GT-JNL"/>
+                        <outlet property="activityIndicator" destination="sMX-BU-Cmg" id="F2M-0x-PsH"/>
                         <outlet property="collectionView" destination="ShV-cO-lkk" id="b6b-bu-XBg"/>
                         <outlet property="segmentControl" destination="nh2-1b-U8s" id="8lw-Jp-vRV"/>
                     </connections>
