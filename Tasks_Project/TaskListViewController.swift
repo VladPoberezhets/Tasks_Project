@@ -33,7 +33,7 @@ class TaskListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if enumeration_task.allCases[indexPath.row] == enumeration_task.task_flickr{
             let storyboard = UIStoryboard(name: "Main",bundle: nil)
-            let photosSearchVc =  storyboard.instantiateViewController(identifier: "PhotosSearchViewController")
+            let photosSearchVc = storyboard.instantiateViewController(identifier: "PhotosSearchViewController")
             self.present(photosSearchVc, animated: true, completion: nil)
         }
     }
