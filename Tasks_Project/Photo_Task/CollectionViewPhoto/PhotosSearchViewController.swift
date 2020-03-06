@@ -103,8 +103,8 @@ class PhotosSearchViewController: UIViewController, UICollectionViewDelegate,UIC
         DispatchQueue.main.async {
             let data = try? Data(contentsOf: self.images[indexPath.row])
             cell.images.image = UIImage(data: data!)
-            
             self.activityIndicator.stopAnimating()
+       
         }
         return cell
     }
@@ -137,24 +137,14 @@ class PhotosSearchViewController: UIViewController, UICollectionViewDelegate,UIC
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellCollectionView", for: indexPath) as! PhotoCollectionViewCell
-        self.performSegue(withIdentifier: "segueToEditPhoto", sender: cell)
-        print("hello")
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellCollectionView", for: indexPath) as! PhotoCollectionViewCell
+        let editPhoto = storyboard?.instantiateViewController(identifier: "EditPhotoViewController") as? EditPhotoViewController
+        editPhoto?.image = cell.images
+        
+        self.present(editPhoto!, animated: true, completion: nil)
+        
     }
-    
-    
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueToEditPhoto"{
-            let cell = sender as? PhotoCollectionViewCell
-            let editPhotoVC = segue.destination as! EditPhotoViewController
-            editPhotoVC.image = cell?.images
-            
-        }
-    }
-    
-    
+
     
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar){

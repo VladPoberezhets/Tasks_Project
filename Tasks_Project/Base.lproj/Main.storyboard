@@ -31,10 +31,11 @@
                             <outlet property="delegate" destination="SXP-fe-koQ" id="Wcz-SB-S2A"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="yVT-gq-sq7"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Px0-u7-1g6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="168"/>
+            <point key="canvasLocation" x="1072.8" y="167.76611694152925"/>
         </scene>
         <!--Photos Search View Controller-->
         <scene sceneID="0iE-A0-Bwi">
@@ -92,13 +93,12 @@
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="images" destination="rwi-ei-uXV" id="nUl-92-eni"/>
-                                            <segue destination="WFu-1k-qzc" kind="show" identifier="segueToEditPhoto" id="k2Z-Rh-U46"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="sMX-BU-Cmg">
-                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="611"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </activityIndicatorView>
                         </subviews>
@@ -121,6 +121,7 @@
                             <outletCollection property="gestureRecognizers" destination="FOQ-Dr-E6Q" appends="YES" id="nd4-nd-1hA"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="Jvp-8e-Vmc"/>
                     <connections>
                         <outlet property="SearchBar" destination="bEb-KE-pNi" id="O5d-GT-JNL"/>
                         <outlet property="activityIndicator" destination="sMX-BU-Cmg" id="F2M-0x-PsH"/>
@@ -135,14 +136,14 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="880.79999999999995" y="160.56971514242881"/>
+            <point key="canvasLocation" x="1820" y="160.56971514242881"/>
         </scene>
         <!--Edit Photo View Controller-->
         <scene sceneID="2dr-2v-9sq">
             <objects>
                 <viewController storyboardIdentifier="EditPhotoViewController" id="WFu-1k-qzc" customClass="EditPhotoViewController" customModule="Tasks_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uG9-KZ-aAQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P4f-9J-1aB">
@@ -160,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGA-rv-1Ne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663" y="168"/>
+            <point key="canvasLocation" x="2600.8000000000002" y="167.76611694152925"/>
         </scene>
     </scenes>
 </document>
