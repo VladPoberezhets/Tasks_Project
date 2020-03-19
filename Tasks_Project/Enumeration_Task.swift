@@ -10,7 +10,7 @@ import Foundation
 
 enum Enumeration_Task:String, CaseIterable{
     case task_flickr
-    case task2
+    case drawing
     case task3
     case task4
 }

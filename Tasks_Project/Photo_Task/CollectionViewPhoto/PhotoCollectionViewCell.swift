@@ -9,6 +9,14 @@
 import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
+    
+    /// This is UIImageView for  **load images** .
     @IBOutlet weak var images: UIImageView!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.images.image = nil
+    }
+    
 }
 

@@ -37,6 +37,38 @@
             </objects>
             <point key="canvasLocation" x="1072.8" y="167.76611694152925"/>
         </scene>
+        <!--Drawing View Controller-->
+        <scene sceneID="ZTn-qc-rb4">
+            <objects>
+                <viewController storyboardIdentifier="DrawingViewController" modalPresentationStyle="fullScreen" id="qAJ-fG-VLq" customClass="DrawingViewController" customModule="Tasks_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oZy-bw-mJy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqd-bY-de6" customClass="Draw" customModule="Tasks_Project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boll" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJe-MP-N0Y">
+                                        <rect key="frame" x="162" y="306" width="51" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.116518832" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dhM-1b-yiA"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageBoll" destination="zJe-MP-N0Y" id="Ao6-d4-KYh"/>
+                        <outlet property="viewDraw" destination="dqd-bY-de6" id="hhV-sb-0xT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TgY-tH-XPi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="834.33283358320841"/>
+        </scene>
         <!--Photos Search View Controller-->
         <scene sceneID="0iE-A0-Bwi">
             <objects>
@@ -50,7 +82,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="lLh-rz-Avk"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                             </searchBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nh2-1b-U8s">
                                 <rect key="frame" x="132" y="76" width="111" height="34"/>
@@ -117,9 +149,6 @@
                             <constraint firstItem="nh2-1b-U8s" firstAttribute="top" secondItem="bEb-KE-pNi" secondAttribute="bottom" constant="20" id="x8c-gE-yX2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jcl-FH-jab"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="FOQ-Dr-E6Q" appends="YES" id="nd4-nd-1hA"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Jvp-8e-Vmc"/>
                     <connections>
@@ -130,11 +159,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fei-df-yS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="FOQ-Dr-E6Q">
-                    <connections>
-                        <action selector="tapHideKeyboard:" destination="gah-bD-Ody" id="WV9-ad-Bx9"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1820" y="160.56971514242881"/>
         </scene>
@@ -146,17 +170,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P4f-9J-1aB">
-                                <rect key="frame" x="67" y="108" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P4f-9J-1aB">
+                                <rect key="frame" x="67" y="108" width="240" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="jF0-BD-Vjk"/>
+                                </constraints>
                             </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TRE-4A-WAh">
+                                <rect key="frame" x="76" y="402" width="222" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="rcJ-XG-MqT"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="EditSizeImage:" destination="WFu-1k-qzc" eventType="valueChanged" id="eVo-qq-fUK"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TRE-4A-WAh" firstAttribute="top" secondItem="P4f-9J-1aB" secondAttribute="bottom" constant="94" id="5Kf-55-gBq"/>
+                            <constraint firstItem="P4f-9J-1aB" firstAttribute="top" secondItem="maY-Bm-E22" secondAttribute="top" constant="108" id="BHv-My-a2s"/>
+                            <constraint firstItem="P4f-9J-1aB" firstAttribute="leading" secondItem="maY-Bm-E22" secondAttribute="leading" constant="67" id="RPI-SM-1kG"/>
+                            <constraint firstItem="maY-Bm-E22" firstAttribute="trailing" secondItem="P4f-9J-1aB" secondAttribute="trailing" constant="68" id="hmy-C2-la3"/>
+                            <constraint firstItem="maY-Bm-E22" firstAttribute="trailing" secondItem="TRE-4A-WAh" secondAttribute="trailing" constant="79" id="k5z-Za-Rno"/>
+                            <constraint firstItem="TRE-4A-WAh" firstAttribute="leading" secondItem="maY-Bm-E22" secondAttribute="leading" constant="78" id="y6z-wp-Q59"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="maY-Bm-E22"/>
                     </view>
                     <navigationItem key="navigationItem" id="2Wq-Jn-xRY"/>
                     <connections>
                         <outlet property="image" destination="P4f-9J-1aB" id="bnN-kx-wIt"/>
+                        <outlet property="slider" destination="TRE-4A-WAh" id="0D0-eL-jkY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGA-rv-1Ne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -164,4 +208,7 @@
             <point key="canvasLocation" x="2600.8000000000002" y="167.76611694152925"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="boll" width="450" height="450"/>
+    </resources>
 </document>

@@ -10,25 +10,26 @@ import UIKit
 
 class EditPhotoViewController: UIViewController {
     
-    
+    /// photo which editing
     @IBOutlet weak var image: UIImageView!
-    var url = [URL]()
+    /// slider for edit size photo
+    @IBOutlet weak var slider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(url)
-        // Do any additional setup after loading the view.
+        
+        slider.value = 1.5
+        slider.minimumValue = 0.1
+        slider.maximumValue = 1.5
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func EditSizeImage(_ sender: Any) {
+        /// value from slider
+        let scale = slider.value
+        ///transformation matrix for use in drawing 2D graphics.
+        let transform = CGAffineTransform.init(scaleX: CGFloat(scale), y: CGFloat(scale))
+        image.transform = transform
     }
-    */
-
+    
 }
