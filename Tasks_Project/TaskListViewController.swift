@@ -44,6 +44,12 @@ class TaskListViewController: UITableViewController {
             ///DrawingViewController
             let DrawingVc = storyboard.instantiateViewController(identifier: "DrawingViewController")
             self.present(DrawingVc, animated: true, completion: nil)
+        }else if enumeration_task.allCases[indexPath.row] == enumeration_task.Json{
+            /// main stroyboard
+            let storyboard = UIStoryboard(name: "Main",bundle: nil)
+            ///DrawingViewController
+            let JsonDecodeVc = storyboard.instantiateViewController(identifier: "JsonDecodeTableViewController")
+            self.present(JsonDecodeVc, animated: true, completion: nil)
         }
     }
     

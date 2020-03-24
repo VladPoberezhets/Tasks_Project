@@ -11,6 +11,6 @@ import Foundation
 enum Enumeration_Task:String, CaseIterable{
     case task_flickr
     case drawing
-    case task3
+    case Json
     case task4
 }

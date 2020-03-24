@@ -6,5 +6,6 @@ target 'Tasks_Project' do
   use_frameworks!
 
 pod 'FlickrKit'
+pod 'Alamofire', '~> 5.0'
 
 end

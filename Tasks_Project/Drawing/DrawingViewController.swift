@@ -29,9 +29,9 @@ class DrawingViewController: UIViewController {
     var bottomTeam:Int = 0
     
     ///right indent value for the ball
-    let counSpacingForBoolX = 15
+    let counSpacingForBoolX = 17
     ///top indent value for the ball
-    let counSpacingForBoolY = 10
+    let counSpacingForBoolY = 12
     
     ///coordinate x boll position
     var bollX:CGFloat = 0.0

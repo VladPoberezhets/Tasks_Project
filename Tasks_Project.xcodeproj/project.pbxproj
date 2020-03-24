@@ -17,6 +17,9 @@
 		F5220F952408535100E5E552 /* PhotosSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5220F942408535100E5E552 /* PhotosSearchViewController.swift */; };
 		F5265BA0241B901900E37E33 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5265B9F241B901900E37E33 /* DrawingViewController.swift */; };
 		F5265BA2241B90F900E37E33 /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5265BA1241B90F900E37E33 /* Draw.swift */; };
+		F5646D9B2429FA79003381B0 /* JsonDecodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5646D9A2429FA79003381B0 /* JsonDecodeTableViewController.swift */; };
+		F5646D9D2429FB9F003381B0 /* VersionDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5646D9C2429FB9F003381B0 /* VersionDevice.swift */; };
+		F5646D9F242A0EC7003381B0 /* JsonDecodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5646D9E242A0EC7003381B0 /* JsonDecodeTableViewCell.swift */; };
 		F58DF3F2240BD7510025C06B /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58DF3F1240BD7510025C06B /* PhotoCollectionViewCell.swift */; };
 		F590A3102411AF460029C493 /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F590A30F2411AF460029C493 /* EditPhotoViewController.swift */; };
 		F5D8B001241FD9C20055E453 /* SettingsPositionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8B000241FD9C20055E453 /* SettingsPositionElement.swift */; };
@@ -37,6 +40,9 @@
 		F5220F942408535100E5E552 /* PhotosSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosSearchViewController.swift; sourceTree = "<group>"; };
 		F5265B9F241B901900E37E33 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		F5265BA1241B90F900E37E33 /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
+		F5646D9A2429FA79003381B0 /* JsonDecodeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecodeTableViewController.swift; sourceTree = "<group>"; };
+		F5646D9C2429FB9F003381B0 /* VersionDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionDevice.swift; sourceTree = "<group>"; };
+		F5646D9E242A0EC7003381B0 /* JsonDecodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecodeTableViewCell.swift; sourceTree = "<group>"; };
 		F58DF3F1240BD7510025C06B /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		F590A30F2411AF460029C493 /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
 		F5D8B000241FD9C20055E453 /* SettingsPositionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPositionElement.swift; sourceTree = "<group>"; };
@@ -95,6 +101,7 @@
 				F5220F7C24084AC100E5E552 /* AppDelegate.swift */,
 				F590A30E2411AF0B0029C493 /* Photo_Task */,
 				F5265B9E241B8FFC00E37E33 /* Drawing */,
+				F5646D992429FA2C003381B0 /* Json */,
 				F5220F9024084B0100E5E552 /* TaskListViewController.swift */,
 				F5220F8224084AC100E5E552 /* Main.storyboard */,
 				F5220F8524084AC800E5E552 /* Assets.xcassets */,
@@ -113,6 +120,16 @@
 				F5D8B000241FD9C20055E453 /* SettingsPositionElement.swift */,
 			);
 			path = Drawing;
+			sourceTree = "<group>";
+		};
+		F5646D992429FA2C003381B0 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				F5646D9A2429FA79003381B0 /* JsonDecodeTableViewController.swift */,
+				F5646D9C2429FB9F003381B0 /* VersionDevice.swift */,
+				F5646D9E242A0EC7003381B0 /* JsonDecodeTableViewCell.swift */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		F590A30E2411AF0B0029C493 /* Photo_Task */ = {
@@ -252,11 +269,14 @@
 				F590A3102411AF460029C493 /* EditPhotoViewController.swift in Sources */,
 				F5220F9324084B9800E5E552 /* Enumeration_Task.swift in Sources */,
 				F5265BA2241B90F900E37E33 /* Draw.swift in Sources */,
+				F5646D9D2429FB9F003381B0 /* VersionDevice.swift in Sources */,
 				F5D8B001241FD9C20055E453 /* SettingsPositionElement.swift in Sources */,
 				F5265BA0241B901900E37E33 /* DrawingViewController.swift in Sources */,
 				F5220F7D24084AC100E5E552 /* AppDelegate.swift in Sources */,
 				F58DF3F2240BD7510025C06B /* PhotoCollectionViewCell.swift in Sources */,
+				F5646D9F242A0EC7003381B0 /* JsonDecodeTableViewCell.swift in Sources */,
 				F5220F952408535100E5E552 /* PhotosSearchViewController.swift in Sources */,
+				F5646D9B2429FA79003381B0 /* JsonDecodeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
